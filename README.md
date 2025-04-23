@@ -617,7 +617,6 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
-
 ![ex1 17 3](https://github.com/user-attachments/assets/b31a958b-62c0-449b-9097-ba386fb683aa)
 
 
@@ -664,54 +663,6 @@ $ ./iftest.sh
 ## OUTPUT
 ![ex1 17 4](https://github.com/user-attachments/assets/1b2c18cc-cb91-4828-80da-d879c8ba2831)
 
-# check if a file
-cat > ifnested.sh 
-```bash
-\#!/bin/bash
-if [ -e $HOME ]
-then
-echo “$HOME The object exists, is it a file?”
-if [ -f $HOME ]
-then
-echo “Yes,$HOME it is a file!”
-else
-echo “No,$HOME it is not a file!”
-if [ -f $HOME/.bash_history ]
-then
-echo “But $HOME/.bash_history is a file!”
-fi
-fi
-else
-echo “Sorry, the object does not exist”
-fi
-^d
-```
-
-cat ifnested.sh 
-```bash
-\#!/bin/bash
-if [ -e $HOME ]
-then
-echo “$HOME The object exists, is it a file?”
-if [ -f $HOME ]
-then
-echo “Yes,$HOME it is a file!”
-else
-echo “No,$HOME it is not a file!”
-if [ -f $HOME/.bash_history ]
-then
-echo “But $HOME/.bash_history is a file!”
-fi
-fi
-else
-echo “Sorry, the object does not exist”
-fi
-```
-
-$ chmod 755 ifnested.sh
- 
-$ ./ifnested.sh 
-##OUTPUT
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -741,6 +692,7 @@ $ chmod 755 elifcheck.sh
 $ ./elifcheck.sh 
 ## OUTPUT
 
+![ex1 17 5](https://github.com/user-attachments/assets/71e5d246-a929-41e6-915f-813086f07c99)
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -756,6 +708,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh
 ## OUTPUT
+![ex1 17 6](https://github.com/user-attachments/assets/0d5c8808-8d89-4a55-8c0f-a92fcf9ce7ec)
 
 # using the case command
 cat >casecheck.sh 
@@ -775,7 +728,11 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
- 
+
+## OUTPUT
+
+ ![ex1 17 7](https://github.com/user-attachments/assets/213fd9e9-6cdd-4ac7-bcde-fbfc31c37483)
+
 cat > whiletest
 ```bash
 #!/bin/bash
@@ -790,8 +747,11 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
- 
+
+## OUTPUT
+
+![ex1 17 9](https://github.com/user-attachments/assets/1bae7766-2ae3-4609-b9dc-c949da0caaed)
+
 cat untiltest.sh 
 ```bash
 \#using the until command
@@ -803,9 +763,9 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
- 
- 
- 
+
+
+
 cat forin1.sh 
 ```bash
 \#!/bin/bash
@@ -817,8 +777,11 @@ done
  ```
  
 $ chmod 755 forin1.sh
- 
- 
+
+## OUTPUT
+
+![ex1 17 12](https://github.com/user-attachments/assets/71026111-6d66-4349-9a5e-84bebd615316)
+
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -830,20 +793,10 @@ done
  ```
  
 $ chmod 755 forin2.sh
- 
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
-$ chmod 755 forin2.sh
- 
-$ ./forin2.sh 
- 
+## OUTPUT
+
+![ex1 17 10](https://github.com/user-attachments/assets/e2da8264-72e6-4c49-87fb-af4ecc76e66b)
+
 cat forin3.sh 
 ```bash
 \#!/bin/bash
@@ -855,18 +808,11 @@ done
 ```
 $ ./forin3.sh 
  
-cat forin1.sh 
-```bash
-#!/bin/bash
-# basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
-```
-$ chmod 755 forin1.sh
+ ## OUTPUT
 
-## OUTPUT
+ ![ex1 17 11](https://github.com/user-attachments/assets/0e6b608f-f8fb-4625-86b9-f8b5d3cd2b6c)
+
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -879,6 +825,7 @@ done
 ```
 $ chmod 777 forinfile.sh
 $ cat cities
+```
 Hyderabad
 Alampur
 Basara
@@ -886,9 +833,11 @@ Warangal
 Adilabad
 Bhadrachalam
 Khammam
+```
 
 ## OUTPUT
 
+![ex1 17 13](https://github.com/user-attachments/assets/df89bcd3-5f24-4ac4-bcc4-2b9d43dd8c1b)
 
 cat forctype.sh 
 ```bash
@@ -903,6 +852,8 @@ $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
 
+![ex1 17 14](https://github.com/user-attachments/assets/d21af652-4c61-47a5-8203-fb388efab611)
+
 cat forctype1.sh 
 ```bash
 #!/bin/bash
@@ -915,6 +866,8 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+
+![ex1 17 15](https://github.com/user-attachments/assets/24ac88d8-dbaa-44a4-931d-f26d3eb0b43e)
 
 cat fornested1.sh 
 ```bash
@@ -934,7 +887,8 @@ $ chmod 755 fornested1.sh
 $ ./fornested1.sh 
  ## OUTPUT
 
- 
+ ![ex1 17 16](https://github.com/user-attachments/assets/40895a96-daf9-442f-99d7-6c06c44cec64)
+
 cat forbreak.sh 
 ```bash
 #!/bin/bash
@@ -949,12 +903,15 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
 
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
- 
+
+## OUTPUT
+
+![Untitled design (1)](https://github.com/user-attachments/assets/35bc1c24-9e62-439a-8a06-9344e4c47dfb)
+
 cat forbreak.sh 
 ```bash
 #!/bin/bash
@@ -975,7 +932,9 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
+
+ ![Untitled design (2)](https://github.com/user-attachments/assets/a1a7dd49-7b54-4c59-a19b-393385a845c7)
+
 cat exread.sh 
 ```bash
 #!/bin/bash
@@ -990,6 +949,7 @@ $ chmod 755 exread.sh
 $ ./exread.sh 
 ## OUTPUT
 
+![Screenshot 2025-04-23 233459](https://github.com/user-attachments/assets/cc870de4-b230-453d-be58-6ea819b64cfe)
 
  cat exread1.sh
 ```bash
@@ -1002,7 +962,7 @@ $ chmod 755 exread1.sh
 
 ## OUTPUT
 
-
+![Screenshot 2025-04-23 233459](https://github.com/user-attachments/assets/d0cecd06-8c73-4bab-95a6-9e162087d494)
 
 $ ./exread1.sh 
  
@@ -1023,11 +983,10 @@ fi
 ```
 ## OUTPUT
  ./funcex.sh 
+./funcex.sh 1 2
 
- 
- ./funcex.sh 1 2
+ ![Screenshot 2025-04-24 003557](https://github.com/user-attachments/assets/c58e8770-4569-41f0-8088-007b0f99852d)
 
- 
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1037,10 +996,11 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
-
-## OUTPUT
 $ ./argshift.sh 1 2 3
- 
+## OUTPUT
+
+ ![Screenshot 2025-04-24 003905](https://github.com/user-attachments/assets/f3d868dc-3140-4080-9a82-1525fd485d82)
+
  cat argshift1.sh
 ```bash
  #/bin/bash 
@@ -1055,9 +1015,11 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
 $ ./argshift.sh 1 2 3
- 
+## OUTPUT
+
+ ![Untitled design (3)](https://github.com/user-attachments/assets/7e3f8b08-e20e-4cbc-adab-36ed7569cb90)
+
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1068,10 +1030,11 @@ while (( "$#" )); do
 done
 set +x
 ```
+./argshift.sh 1 2 3
 ## OUTPUT
- ./argshift.sh 1 2 3
  
- 
+ <img width="323" alt="Untitled design (4)" src="https://github.com/user-attachments/assets/e11386bd-385c-4294-8404-7748ad63a451" />
+
 cat > nc.awk
 ```bash
 BEGIN{}
@@ -1101,7 +1064,8 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ![Untitled design (5)](https://github.com/user-attachments/assets/929d778c-f44e-4efc-b9b6-0461cb389359)
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1129,6 +1093,7 @@ fi
 ```
 ## OUTPUT 
 
+![Untitled design (6)](https://github.com/user-attachments/assets/6381cc60-5efb-4831-b563-5407bb7df520)
 
 # RESULT:
 The Commands are executed successfully.
